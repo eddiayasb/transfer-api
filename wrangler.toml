@@ -1,8 +1,9 @@
 #:schema node_modules/wrangler/config-schema.json
 
-name = "transfer-api"
+name = "unlimited-transfer-api"
 main = "src/worker.js"
-compatibility_date = "2026-06-21"   # ← 更新到最近日期
+compatibility_date = "2026-06-21"   # ← 改成今天日期（非常重要）
+compatibility_flags = ["nodejs_compat"]   # ← 强烈推荐添加，现代 Worker 常用
 
 # Store the upstream key as a secret instead of committing it here:
 # wrangler secret put UNLIMITED_SURF_API_KEY
